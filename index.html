@@ -1,0 +1,633 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<meta name="description" content="Once upon a time there was a man named Charles W. Cushman. A hobbyist, he was a very early adopter of color film, and archives like his are rare. That is, archives this vast and this good. Beyond his photos lies a story of road trips, attempted murder, and the lifelong search for depth of field.">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	
+	<link rel="shortcut icon" href="http://www.npr.org/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="http://media.npr.org/news/specials/2012/cushman/img/touch-icon-57x57-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://media.npr.org/news/specials/2012/cushman/img/touch-icon-72x72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://media.npr.org/news/specials/2012/cushman/img/touch-icon-114x114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://media.npr.org/news/specials/2012/cushman/img/touch-icon-144x144-precomposed.png" />
+  
+	<link href='http://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
+	
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link  rel="stylesheet" href="css/jplayer-black-and-yellow.css">
+	
+	<!-- Begin JavaScript -->
+		<script src="js/libs/modernizr-2.0.6.min.js"></script>	
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+		
+		<script src="js/libs/popcorn-complete.min.js"></script>
+		
+		<script src="js/plugins.js"></script>
+
+	 	
+	 	<script type="text/javascript">
+	 	
+		//<![CDATA[
+		$(document).ready(function(){
+		
+			$("#pop-audio").jPlayer({
+				ready: function () {
+					$(this).jPlayer("setMedia", {
+						mp3: "FalconHood.mp3",
+						oga: "FalconHood.ogg"
+					}).jPlayer("pause");
+				},
+				play: function() { // To avoid both jPlayers playing together.
+					$(this).jPlayer("pauseOthers");
+				},
+				ended: function (event) {
+					$(this).jPlayer("pause");
+				},
+				swfPath: "js",
+				supplied: "oga, mp3",
+				//errorAlerts:true
+			});
+			
+			$('#lm').click(function() {
+				$.smoothScroll({
+					speed: 800,
+					scrollTarget: '#learn'
+				});
+				return false;
+			});
+			
+			//jplayer events
+			
+			$('#title-button').click(function() {
+				$.smoothScroll({
+					speed: 800,
+					scrollTarget: '#introduction'
+				});
+				return false;
+			});
+			
+			$('#second_player').click(function() {
+				$.smoothScroll({
+					speed: 800,
+					scrollTarget: '#chapter1',
+					afterScroll: function() {$("#pop-audio").jPlayer("play", 0);}
+				});
+				return false;
+			});
+			
+			//chapter 1
+			$('#discovery').click(function() {
+				$.smoothScroll({
+					scrollTarget: '#chapter1',
+					afterScroll: function() {$("#pop-audio").jPlayer("play", 0);}
+				});
+				return false;
+			});
+			//chapter 2
+			$("#witness").click( function() {
+  				$("#pop-audio").jPlayer("play", 65);
+			});
+			//chapter 3
+			$("#obsessive").click( function() {
+  				$("#pop-audio").jPlayer("play", 117);
+			});
+			//chapter 4
+			$("#mythic").click( function() {
+  				$("#pop-audio").jPlayer("play", 243);
+			});
+			
+			$("#learn-more").click( function() {
+  				$("#pop-audio").jPlayer("pause");
+			});
+			//learn more
+			$('#learn-more').click(function() {
+				$.smoothScroll({
+					speed: 900,
+					scrollTarget: '#learn',
+					afterScroll: function() {$("#pop-audio").jPlayer("pause");}
+				});
+				return false;
+			});
+			
+
+		});
+		//]]>
+		</script>
+	<!-- End JavaScript -->
+	
+	<script src="js/text.js"></script>
+
+<title>Cushman Demo : NPR</title> 
+</head>
+<body id="top">
+
+<div id="global-header" class="clearfix">
+		
+			<nav id="main-nav">
+				<ul>
+					<li id="home"><a href="http://www.npr.org/"><img src="img/npr.jpg" alt="npr" width="55" height="18" /></a></li>
+					<li><a href="http://www.npr.org/sections/news/">news</a></li>
+					<li><a href="http://www.npr.org/sections/arts/">arts &amp; life</a></li>
+					<li><a href="http://www.npr.org/music/">music</a></li>
+				</ul>
+			</nav><!-- /main-nav -->
+		
+</div> <!-- global-header -->
+
+<!-- ========================================= TITLE =================================== -->
+<div  id="titlecard">
+	<div id="title">
+		<div id="title-inner">
+		 <a id="title-button" href="#">
+		<h5>NPR's Picture Show presents</h5>
+		<h1><span>Lost and</span> found</h1>
+			<h2>The demo &#9660;</b></h2></a>
+		</div><!--/title-inner-->	
+			
+	</div><!--/title-->	
+
+	<div class="carousel" data-autoplay>
+	    <div>
+			<img src="http://placekitten.com/700/1000" alt="placekitten">
+	    </div><!--/1-->
+	    
+	    <div>
+	    	<img src="http://placekitten.com/700/1000" alt="placekitten">
+	    </div><!--/2-->
+	    <div>
+			<img src="http://placekitten.com/690/1000" alt="placekitten">
+	    </div><!--/3-->
+	</div><!--/carousel-->
+</div> <!-- titlecard -->
+
+<div id="introduction">
+	<div id="intro-inner">
+	
+		<div id="intro-text">
+		<h2>Thanks for your interest in the project</h2>
+	
+		<h4>This is a demo of the code behind the NPR project <a href="http://www.npr.org/news/specials/2012/cushman/">"Lost and Found"</a>. Demo Music: Falcon Hood by <a href="http://podingtonbear.com/">Chad Crouch</a> (Podington Bear). Placeholder images courtesy of <a href="http://placekitten.com/">placekitten</a>.</h4> 
+		
+		<h6><a id="second_player" href="#">Play &#9656;</a></h6>
+		</div><!--/intro-text-->
+	</div><!--/intro-inner-->
+</div>
+
+<div id="navbar">
+	<!--<p id="home"><a href="#global-header">Home</a></p>-->
+
+	<div id="audio">
+	
+		<div id="pop-audio" class="jp-jplayer"></div>
+		
+		<div class="jp-audio-container">
+			<div class="jp-audio">
+				<div class="jp-type-single">
+				
+					<div id="jp_interface_1" class="jp-interface">
+						<ul class="jp-controls">
+							<li><a href="#" class="jp-play" tabindex="1">play</a></li>
+							<li><a href="#" class="jp-pause" tabindex="1">pause</a></li>
+							
+							<li><a href="#" class="jp-mute" tabindex="1">mute</a></li>
+							<li><a href="#" class="jp-unmute" tabindex="1">unmute</a></li>
+							
+						</ul>
+						<div class="jp-progress-container">
+							<div class="jp-progress">
+								<div class="jp-seek-bar">
+									<div class="jp-play-bar"></div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="jp-volume-bar-container">
+							<div class="jp-volume-bar">
+								<div class="jp-volume-bar-value"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> <!--/audio -->
+	
+	<ul id="chapter-nav">
+		<li><div id="disco"><a id="discovery" href="#c1">discovery</a></div></li>
+		<li><div id="wit"><a id="witness" href="#c2">witness</a></div></li>
+		<li><div id="ob"><a id="obsessive" href="#c3">obsessive</a></div></li>
+		<li><div id="myth"><a id="mythic" href="#c4">depth</a></div></li>
+	</ul>
+
+</div> <!--/navbar -->
+
+<!-- !chapter1 -->
+<div id="chapter1" class="panel">
+
+	
+	<div class="panel-inner">
+	
+	<div id="c1-intro">
+	<h2>The Discovery</h2>
+	</div> 
+	
+	<div id="photo1">
+		<h2>The Discoverer</h2>
+		<p class="credit">Credit: Robb Hill</p>
+	</div> <!-- /.card -->
+	
+	<div id="photo2">
+		<h2>Boxes and boxes</h2>
+	</div> <!-- /.card -->
+	
+	<div id="photo3" class="card">
+		<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+		<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+	</div> <!-- /.card -->
+	
+	<div id="photo4" class="card">
+		<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+		<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+	</div> <!-- /.card -->
+	
+	<div id="photo5" class="card">
+		<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+		<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+	</div> <!-- /.card -->
+	
+	<div id="photo5b">
+		<h2>Charles W. Cushman</h2>
+	</div>
+	
+	<div id="photo6" class="card">
+		<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+		<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+	</div> <!-- /.card -->
+	
+	<div id="photo7" class="card">
+		<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+		<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+	</div> <!-- /.card -->
+	
+	<div id="photo8" class="card">
+		<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+		<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+	</div> <!-- /.card -->	
+	
+		<div id="c2-intro" class="card">
+			<h2>A witness to his time</h2>
+		</div> <!-- /.card -->
+		
+		<div id="photo9a" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+	
+		<div id="photo9" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+		
+		<div id="photo9b" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+		<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->	
+
+		<div id="photo10" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+		
+		<div id="photo11" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+		
+		<div id="photo12" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+				<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo14" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo15" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo17" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->	
+		
+		<div id="c3-intro" class="card">
+			<h2>The hobbyist and the obsessive</h2>
+		</div> <!-- /.card -->
+
+		<div id="photo21" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo22" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo23" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo24" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo25" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo26" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo27" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo30" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo31" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo33" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo34" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo35" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+		<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+		
+		<div id="photo35b" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+		<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo36" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo37" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> 
+
+		<div id="photo38" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo39" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div>
+
+		<div id="photo40" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div>
+
+		<div id="photo41" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo42" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo43" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo45" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo46" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo47" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo48" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+				<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo49" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo50" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->	
+		
+		<div id="c4-intro" class="card">
+			<h2>Depth of field</h2>
+		</div> <!-- /.card -->
+
+		<div id="photo52" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo53" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo54" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo55" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo56" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo57" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo60" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo61" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo63" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo64" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo66" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo67" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo68" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo69" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+		<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+		
+		<div id="photo69b" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+		<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo70" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo71" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+
+		<div id="photo72" class="card">
+			<img src="http://placekitten.com/g/600/403" alt="kitten" class="scale-with-grid">
+			<p class="photo-info"><a href="http://flickr.com/photos/paulesson/">by pontman</a></p>
+		</div> <!-- /.card -->
+		
+		<div id="c5-intro" class="card">
+			<h2>Share this story</h2>
+
+	<div id="quotes">
+
+			<blockquote>
+				<p>&quot;Photography is not a contest&#8230; It's about being a witness to your times.&quot;</p>
+				<h5>&#8212;Rich Remsberg</h5>
+			</blockquote>
+			
+			<blockquote>
+				<p>&quot;He was a hobbyist&#8230; but he was also an obsessive. You put those two things together and you've got a certain kind of picture-taker.&quot;</p>
+				<h5>&#8212;Eric Sandweiss</h5>
+			</blockquote>
+			
+	</div><!--/quotes -->
+	
+	<a id="lm" href="#learn">
+			<h3>Learn More  &darr;</h3>
+	</a><!-- /lm -->
+
+		</div> <!-- /.card -->
+			
+	</div><!-- /panel-inner -->
+
+</div><!-- /chapter1 -->
+
+
+
+<!-- !learn -->
+<div id="learn">
+
+	<div class="container">
+	
+		<div id="about" class="four columns">
+			
+			
+		
+			
+		</div><!--/four--> 
+	
+		<div id="cushman-legacy" class="eleven columns offset-by-one">
+			<h2>heading 2</h2>
+			
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		
+		<div id="about-project">
+		<h3>About the project</h3>
+			<p>This is a demo of the code behind the NPR project <a href="http://www.npr.org/news/specials/2012/cushman/">"Lost and Found"</a>. Demo Music: Falcon Hood by <a href="http://podingtonbear.com/">Chad Crouch</a> (Podington Bear). Placeholder images courtesy of <a href="http://placekitten.com/">placekitten</a>.</p>
+		</div>
+
+		</div><!--/twelve-->
+	</div><!-- /container -->
+	
+</div><!-- /learn -->
+
+<!--[if lt IE 8 ]>
+	<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+	<script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+<![endif]-->
+
+
+
+</body>
+</html>

@@ -1,0 +1,1173 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ *
+ * Detailed information about this CSS: h5bp.com/css
+ *
+ * ==|== normalize ==========================================================
+ */
+
+
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ * 2. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+ */
+
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+html, button, input, select, textarea { font-family: georgia, serif; color: #555; }
+
+body { margin: 0; font-size: 1em; line-height: 1.4; }
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate
+ * Also: hot pink! (or customize the background color to match your design)
+ 
+
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; } */
+
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+
+a { color: #3366cc; text-decoration: none; }
+a:visited { color: #3366cc; }
+
+/* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active { color: #204490; outline: 0; }
+
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+
+blockquote { margin: 1em 40px; }
+
+dfn { font-style: italic; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+/* Redeclare monospace font family: en.wikipedia.org/wiki/User:Davidgothberg/Test59 */
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+
+/* Improve readability of pre-formatted text in all browsers */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+
+small { font-size: 85%; }
+
+/* Position subscript and superscript content without affecting line-height: gist.github.com/413930 */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; margin: 0; padding: 0; }
+
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * Improve image quality when scaled in IE7
+ * code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+/*
+ * Correct overflow displayed oddly in IE9 
+ */
+
+svg:not(:root) { overflow: hidden; }
+
+
+/* =============================================================================
+   Chrome Frame Prompt
+   ========================================================================== */
+
+.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
+
+
+/* =============================================================================
+   Primary styles
+   Author: Wesley Lindamood (@lindamood)
+   ========================================================================== */
+
+/************* global styles *************/
+
+body {background-color: #111;}
+
+h1, h2, h3, h4, h5, h6 {  font-weight: normal;}
+
+/************* HEADER ******************/
+
+#global-header {
+	position: relative;
+	width: 100%;
+	background-color: #eee;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee)); 
+	background-image: -webkit-linear-gradient(top, #fff, #eee); 
+	background-image:    -moz-linear-gradient(top, #fff, #eee); 
+	background-image:     -ms-linear-gradient(top, #fff, #eee); 
+	background-image:      -o-linear-gradient(top, #fff, #eee); 
+	background-image:         linear-gradient(top, #fff, #eee);
+}
+
+#main-nav {position: relative; padding: 0; margin-left: 35px;}
+
+#main-nav ul {
+	margin: 0;
+}
+
+#main-nav li {
+	float: left;
+	font: 12px helvetica, arial, sans-serif;
+	margin: 8px 8px;
+}
+
+#main-nav li a {
+	color: #666;
+	display: block;
+	font-weight: 300;
+	line-height: 1;
+	padding: 2px 6px 5px;
+	border: none;
+	margin: 1px;
+}
+
+#global-header #main-nav li a:hover {
+	background-color: #fff;
+	text-decoration: none;
+	border: 1px solid #eee;
+    margin: 0;
+}
+
+#global-header #main-nav #home a {
+	padding: 0;
+}
+
+#global-header #main-nav #home a:hover {
+	background-color: transparent;
+	text-decoration: none;
+	border: 1px solid #fff;
+    margin: 0;
+}
+
+/**** title card ****/
+
+#titlecard {
+	background: #111;
+	position: relative;
+	height: 1000px;
+}
+
+#title {
+	position: absolute;
+	top: 10px;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+}
+
+#title-inner {
+	width: 500px; 
+	margin: 0 auto; 
+	padding-top: 50px;
+	}
+
+#title h1 {
+	font-size: 145px;
+	margin: -10px 0 10px 0;
+	padding: 0 !important;
+	line-height: .8;
+	color: #fff;
+	text-shadow: 1px 2px 3px #000;
+	font-family: 'Hammersmith One', helvetica, arial, sans-serif;
+	text-transform: uppercase;
+}
+
+#title h1 span {font-size: 104px;}
+
+#title h2 {
+	font-size: 31px;
+	margin: 0 0 0 8px;
+color: #a6dbd5;
+font-family: 'Hammersmith One',helvetica, arial, sans-serif;
+line-height: 1;
+font-weight: normal;
+text-shadow: 1px 2px 3px #000;
+text-transform: uppercase;
+}
+
+#title h2 b {
+color: #61dbcd;
+font-weight: normal;
+}
+
+#title a:hover h1{
+	color: #a6dbd5;
+	}
+
+#title a:hover h2{
+	color: #fff;
+	}
+
+#title h5 {
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-family: helvetica;
+	font-size: 18px;
+	margin: 0 0 0 8px;
+	color: #ddd;
+	text-shadow: 1px 2px 3px #000;
+}
+
+/** carousel **/
+
+.carousel {
+	width: 100%;
+	position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.carousel .carousel-item {
+	display: none;
+}
+.carousel .carousel-active {
+	display: block;
+}
+
+.carousel .carousel-nav:nth-child(2) {
+	display: none;
+}
+
+/**** title card ****/
+
+#titlecard .carousel-nav {
+display: none;
+visibility: hidden;
+}
+
+#introduction {
+	background: #111;
+	position: relative;
+	height: 1000px;
+}
+
+#intro-inner { 
+background: #111 url(http://placekitten.com/800/600);
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	background-size:cover;
+	height: 1100px;
+}
+
+#intro-text {
+	width: 600px;
+	margin: 0 auto;
+	padding: 100px 0 0 30px;
+}
+
+#intro-text h2 {
+	font-size: 48px;
+	margin: 0 0 10px 0;
+	line-height: 1;
+	color: #fff;
+	text-shadow: 1px 2px 3px #192449;
+	font-family: 'Hammersmith One', helvetica, arial, sans-serif;
+	text-transform: uppercase;
+}
+
+#intro-text h3 {
+	font-size: 26px;
+	margin: 0 0 30px 0;
+	line-height: 1;
+	color: #a6dbd5;
+	text-shadow: 1px 2px 2px #192449;
+	font-family: georgia;
+}
+
+#intro-text h4 {
+	font-size: 19px;
+	margin: 0 0 20px 0;
+	line-height: 1.5;
+	text-shadow: 1px 2px 2px #192449;
+	color: #fff;
+	font-family: georgia;
+	font-weight: normal;
+}
+
+#intro-text h5 {
+	font-size: 18px;
+	margin: 0 0 10px 0;
+	text-shadow: 1px 2px 2px #192449;
+	color: #fff;
+	font-family: 'Hammersmith One', helvetica, arial, sans-serif;
+	font-weight: normal;
+}
+
+#intro-text h6 a {
+	font-size: 40px;
+	color: #a6dbd5;
+	font-family: 'Hammersmith One', helvetica, arial, sans-serif;
+	text-transform: uppercase;
+	text-shadow: 1px 2px 2px #192449;
+	font-weight: normal;
+}
+
+#intro-text h6 a:hover {color: #fff;}
+
+/**** audio navigation ****/
+
+#navbar {
+position: relative;
+bottom: -60px;
+z-index: 150;
+height: 40px;
+margin-left: 30px;
+}
+
+#chapter-nav {
+	position: absolute;
+	top: -15px;
+	left: 350px;
+}
+
+#chapter-nav li {
+	list-style-type: none;
+	float: left;
+	font-family: 'Hammersmith One',helvetica, arial, sans-serif;
+	font-size: 14px;
+	margin-top: 5px;
+	margin-right: 30px;
+}
+
+#chapter-nav li a {
+color: #666;
+text-shadow: 1px 2px 2px #000;
+}
+
+#chapter-nav li a:hover {
+color: #fff;
+}
+
+#chapter-nav li .active a {
+color: #fff;
+}
+
+/*** main canvas gif ***/
+
+#chapter1 {
+background: #111 url(http://placekitten.com/800/600);
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	background-size:cover;
+position: relative;
+height: 800px;
+color: #ddd;
+
+}
+
+/* panel */
+
+.panel {
+	position: relative;
+	background-color: #111;
+	box-shadow: 2px -1px 20px #000;
+	color: #ccc;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	padding-top: 70px;
+}
+
+/* panel text */
+
+.photo-info {font-size: 13px; text-align: right;}
+.photo-info a {color: #444; font-style: italic;}
+.photo-info a:hover {color: #000;}
+
+
+.panel h2 {
+	font-family: 'Hammersmith One', helvetica, arial, sans-serif;
+	text-transform: uppercase;
+	margin: 0;
+	line-height: .9;
+	text-shadow: 1px 2px 3px #000;
+	font-size: 100px;
+	width: 900px;
+}
+
+.panel a {
+	color: #ccc;
+}
+
+.panel a:hover {
+	color: #fff;
+}
+
+/* card */
+
+.card {
+	width: 600px;
+	float: left;
+	padding-left: 30px;
+	margin-right: 120px;
+	padding-top: 80px;
+}
+
+.panel-inner {
+	width: 66000px;
+}
+
+/**** c1-intro ****/
+
+#c1-intro {
+	width: 1500px;
+	height: 700px;
+	float: left;
+	margin: 0 0 0 0;
+	background: transparent url(http://placekitten.com/800/600);
+	padding: 100px 30px;
+	border-right: 6px solid #000;
+	
+}
+
+#c1-intro.color {
+	background: transparent url(http://placekitten.com/800/600);
+
+}
+
+#c1-intro h2 {
+	font-size: 120px;
+	margin-bottom: 20px;
+}
+
+#c1-intro h3 {
+	font-family: 'Hammersmith One', helvetica, arial, sans-serif;
+	margin: 0 0 20px 0;
+	text-shadow: 1px 2px 3px #000;
+	font-size: 28px;
+	width: 800px;
+	font-weight: normal;
+	color: #a6dbd5;
+	text-shadow: 3px 4px 10px #000;
+}
+
+/**** remsberg ****/
+
+#photo1 {
+	width: 1110px;
+	height: 560px;
+	float: left;
+	background: transparent url(http://placekitten.com/800/600);
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	background-size:cover;
+	padding: 100px 30px;
+	position: relative;
+}
+
+#photo1 h2 {
+	font-size: 110px;
+}
+
+#photo1 .credit {
+	font-family: helvetica, arial, sans-serif;
+	font-size: 11px;
+	font-color: #fff;
+	position: absolute;
+	z-index: 15;
+	bottom: 0;
+	right: 10px;
+	
+}
+
+/**** boxes and boxes ****/
+
+#photo2 {
+	width: 3500px;
+	height: 700px;
+	float: left;
+	margin: 0 120px 0 0;
+	background: transparent url(http://placekitten.com/800/600);
+	padding: 100px;
+	border-left: 5px solid #000;
+	border-right: 5px solid #000;
+}
+
+#photo2 h2 {font-size: 250px; color: #aaa; width: 3000px;}
+
+/**** charles w cushman scrolling text ****/
+
+#photo5b {
+	width: 3000px;
+	height: 700px;
+	float: left;
+	margin: 0 120px 0 700px;	
+	padding: 100px 0;
+}
+
+#photo5b h2 {font-size: 230px; color: #aaa; width: 3000px; margin-top: 100px;}
+
+/*** c2-intro ***/
+
+#photo8 {margin-right: 900px; }
+
+#c2-intro {
+	width: 1500px;
+	height: 700px;
+	background: #111 url(http://placekitten.com/800/600);
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	background-size:cover;
+	border-right: 5px solid #000;
+	border-left: 5px solid #000;
+	
+}
+
+#c2-intro h2 {
+	font-size: 120px;
+}
+
+/*** c3-intro ***/
+
+#photo20 {margin-right: 900px;}
+
+#c3-intro {
+	width: 1500px;
+	height: 700px;
+	background: #111 url(http://placekitten.com/800/600);
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	background-size:cover;
+	border-right: 5px solid #000;
+	border-left: 5px solid #000;
+	
+}
+
+#c3-intro h2 {
+	font-size: 85px;
+	width: 850px;
+}
+
+/*** c4-intro ***/
+
+#photo50 {margin-right: 900px;}
+
+#c4-intro {
+	width: 1500px;
+	height: 700px;
+	background: #111 url(http://placekitten.com/800/600);
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	background-size:cover;
+	border-right: 5px solid #000;
+	border-left: 5px solid #000;
+	
+}
+
+#c4-intro h2 {
+	font-size: 100px;
+}
+
+/*** c5-intro- share page ***/
+
+#c5-intro {
+	width: 960px;
+	height: 700px;	
+}
+
+#c5-intro h2 {
+	font-size: 70px;
+	margin-bottom: 30px;
+}
+
+#quotes {margin-top: 10px;}
+
+#quotes blockquote {
+	width: 400px;
+	float: left;
+	margin: 0 70px 0 0;
+	font-size: 22px;
+	text-shadow: 1px 2px 3px #000;
+	color: #888;
+}
+
+#quotes blockquote h5 {font-style: italic; font-size: 24px; margin: 0;}
+
+#c5-intro h3 {
+	font-size: 50px;
+	font-family: 'Hammersmith One', helvetica, arial, sans-serif;
+	text-transform: uppercase;
+	margin: 0;
+	line-height: .9;
+	text-shadow: 1px 2px 3px #000;
+	padding-top: 50px;
+}
+
+.twitter-share-button {float: left;}
+
+#lm {
+clear: both;
+display: block;
+}
+
+#lm p {
+font-size: 21px;
+}
+
+#lm a {
+color: #fff;
+}
+
+/**** cushman's legacy ****/
+
+#learn {
+	background: #fff;
+	position: relative;
+	 margin-top: -50px;
+	 padding-top: 100px;
+	 border-top: 5px solid #000;
+	
+}
+
+#learn h2 {
+	font-size: 45px;
+	margin: 0;
+	line-height: .9;
+	color: #000;
+	font-family: 'Hammersmith One', helvetica, arial, sans-serif;
+	text-transform: uppercase;
+}
+
+#cushman-legacy h3 {
+	font-size: 18px;
+	margin: 0;
+	line-height: .9;
+	color: #333;
+	font-family: 'Hammersmith One', helvetica, arial, sans-serif;
+	text-transform: uppercase;
+}
+
+#about p {
+	font-size: 12px;
+	font-family: helvetica, arial, sans-serif;
+}
+
+
+#cushman-book {float: right; margin: 10px 0 10px 10px; width: 200px;}
+
+#cushman-book a p {
+	font-size: 11px;
+	font-family: helvetica, arial, sans-serif;
+	color: #666;
+}
+
+/* notebook slideshow */
+
+#notebooks .carousel {
+ 	position: relative;
+}
+
+#learn #first-note h2 {
+	font-size: 70px;
+	color: #fff;
+	text-shadow: 1px 2px 3px #000;
+	position: absolute;
+	top: 160px;
+	left: 30px;
+}
+
+#notebooks .carousel-item img {
+padding-bottom: 90px;
+}
+
+#notebooks #first-note img {
+padding-bottom: 8px;
+}
+
+#notebooks .carousel p {
+	position: absolute;
+	bottom: 30px;
+	left: 0px;
+	font-family: helvetica, arial, sans-serif;
+	color: #555;
+	font-size: 12px;
+	
+}
+
+#notebooks .carousel-nav {
+position: absolute;
+bottom: 0;
+left: 0px;
+z-index: 15;
+width: 100%;
+background-color: #ececec;
+border-top:1px solid #fff;
+}
+
+#notebooks .carousel-nav a {
+display: block;
+float: left;
+color: #fff;
+font-family: helvetica;
+background: #ccc url('http://media.npr.org/chrome/slideshow_controls.png');
+margin-bottom: 1px;
+border-right: 1px solid #fff;
+text-indent: -10000px;
+width: 27px;
+height: 27px;
+}
+
+#notebooks .carousel-nav .prev {background-position: 10px 9px;}
+#notebooks .carousel-nav .next {background-position: 12px -179px;}
+
+#notebooks .carousel-nav a:hover {background-color: #6d89d1;}
+
+.carousel-item h6 {
+position: absolute;
+bottom: 8px;
+right: 10px;
+margin: 0;
+z-index: 16;
+font-family: helvetica, arial, sans-serif;
+font-size: 11px;
+}
+
+.carousel-item h6 a {
+color: #666;
+}
+
+.carousel-item h6 a:hover {
+text-decoration: underline;
+}
+
+.carousel-item h6 b{
+display: block;
+}
+
+#learn h3 {
+	font-size: 18px;
+	line-height: .9;
+	color: #333;
+	font-family: 'Hammersmith One', helvetica, arial, sans-serif;
+	text-transform: uppercase;
+}
+
+#about-project {border-top: 1px solid #eee; padding-top: 20px;}
+
+#about-project p {font-size: 12px; font-family: helvetica, arial, sans-serif; color: #777;}
+
+#footer {margin-top: 30px; padding-bottom: 50px;}
+
+#footer p {font-size: 12px; font-family: helvetica, arial, sans-serif; line-height: 1.2;}
+ 
+#footer a p {color: #555;}
+
+#footer a:hover p {color: #000;}
+
+/* =============================================================================
+   Non-semantic helper classes
+   Please define your styles before this section.
+   ========================================================================== */
+
+/* For image replacement */
+.ir { border:0; font: 0/0 a; text-shadow: none; color: transparent; background-color: transparent; }
+
+/* Hide for both screenreaders and browsers:
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden { display: none; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* porportionally scale image up or down */
+	img.scale-with-grid {
+		max-width: 100%;
+		height: auto; }
+
+/* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ 
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+*/ 
+
+/* #Media Queries
+================================================== */
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
+		
+		/* audio player */
+		.jp-progress-container{display: none;}
+		.jp-volume-bar-container {display: none;}
+		
+		div.jp-audio div.jp-type-single a.jp-mute,
+		div.jp-audio div.jp-type-single a.jp-unmute {
+				display: none; 
+				visibility: hidden;
+		}
+		
+		/* chapter nav */
+		#chapter-nav {left: 10px;}
+		
+		/*chapter headings */
+		
+		#chapter1 {height: 950px;}
+		
+		.panel h2 {width: 760px;}
+		
+		
+		#c1-intro h2 {font-size: 80px;}
+		
+		#c2-intro h2 {font-size: 60px;}
+		#c2-intro {width: 760px; height: 450px;}
+		
+		#c3-intro h2 {font-size: 70px; width: 750px;}
+		#c3-intro {width: 760px; height: 450px;}
+		
+		
+		#c4-intro h2 {font-size: 90px;}
+		#c4-intro {width: 730px; height: 450px;}
+		
+		/*remsberg*/
+		#photo1 h2 {font-size: 80px;}
+		#photo1 {width: 760px; height: 400px;}
+		
+		/*boxes*/
+		#photo2 h2 {font-size: 250px;}
+		
+		#c5-intro {width: 768px;}
+
+		#quotes blockquote {
+			width: 300px;
+			float: left;
+			margin: 0 40px 0 0;
+			font-size: 22px;
+			text-shadow: 1px 2px 3px #000;
+			color: #888;
+		}
+
+		#quotes blockquote h5 {font-size: 14px;}
+
+		#c5-intro h3 {
+			font-size: 40px;
+			padding-top: 30px;
+		}
+		
+		#notebooks #first-note img {
+			padding-bottom: 25px;
+		}
+	}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
+		
+		/*title*/
+		#title-inner {
+			width: 360px; 
+			margin: 0 auto; 
+			padding-top: 50px;
+		}
+		
+		#title {top: 0; left:0; width: 100%;}
+
+		#title h1 {font-size: 105px;}
+
+		#title h1 span {font-size: 73px;}
+		
+		#title h2 {font-size: 24px;}
+
+		#title h5 {font-size: 18px; letter-spacing: 0;}
+		
+		/*intro*/
+		
+		#intro-text {width: 460px;padding-left: 20px;}
+		
+		#intro-text h2 {font-size: 28px;margin-bottom: 15px;}
+		
+		#intro-text h3 {font-size: 28px; margin-bottom: 15px;}
+		
+		#intro-text h4 {font-size: 20px;line-height: 1.1; margin-bottom: 15px;}
+		
+		#intro-text h6 a {font-size: 32px;}
+		
+		/* audio player */
+		.jp-progress-container{display: none;}
+		.jp-volume-bar-container {display: none;}
+		
+		div.jp-audio div.jp-type-single a.jp-mute,
+		div.jp-audio div.jp-type-single a.jp-unmute {
+				display: none; 
+				visibility: hidden;
+		}
+		
+		/* chapter nav */
+
+		#navbar {bottom: -50px; margin-left: 5px;}
+		#chapter-nav {top: -13px;}
+		#chapter-nav {left: 10px;}
+		#chapter-nav li {
+			font-size: 14px; 
+			margin-right: 20px;  
+		}
+		
+		#chapter-nav li a {color: #aaa;}
+
+
+		#chapter1 {padding-top: 50px;}
+
+		#c1-intro, #c2-intro, #c3-intro, #c4-intro {padding-left: 10px;}
+		
+		/*chapter headings */
+		.panel h2 {width: 520px;}
+		
+		#c1-intro h2 {font-size: 60px; width: 480px;}
+		
+		#c2-intro h2 {font-size: 60px;  width: 480px;}
+		#c2-intro {width: 700px; height: 400px;}
+		
+		#c3-intro h2 {font-size: 60px; width: 480px;}
+		#c3-intro {width: 700px; height: 400px;}
+		
+		#c4-intro h2 {font-size: 60px;  width: 480px;}
+		#c4-intro {width: 600px; height: 350px;}
+		
+		#c5-intro {width: 768px;}
+
+		#quotes blockquote {
+			width: 200px;
+			float: left;
+			margin: 0 40px 0 0;
+			font-size: 16px;
+			text-shadow: 1px 2px 3px #000;
+			color: #888;
+		}
+
+		#quotes blockquote h5 {font-size: 14px;}
+
+		#c5-intro h3 {
+			font-size: 40px;
+			padding-top: 30px;
+		}
+
+		#quotes blockquote {
+			width: 300px;
+			float: left;
+			margin: 0 40px 0 0;
+			font-size: 20px;
+			text-shadow: 1px 2px 3px #000;
+			color: #888;
+			}
+
+		#quotes blockquote h5 {font-size: 18px;}
+
+		#c5-intro h3 {
+			font-size: 40px;
+			padding-top: 40px;
+		}
+		
+		/*card*/
+		.card {width: 460px; padding-left: 10px;}
+		
+		/*remsberg*/
+		#photo1 h2 {font-size: 60px;}
+		#photo1 {width: 700px; height: 400px;}
+
+		
+		/*boxes*/
+		#photo2 {width: 2500px;}
+		#photo2 {padding-left: 30px; }
+		#photo2 h2 {font-size: 150px;}
+		
+		/*notebooks*/
+		
+		#learn #first-note h2 {
+			font-size: 50px;
+			top: 130px;
+			left: 20px;
+		}
+		
+		#notebooks #first-note img {
+			padding-bottom: 36px;
+		}
+		
+		.carousel-item h6 {font-size: 9px; right: 5px;}
+		
+		#learn h2 {margin-top: 20px;}
+		
+	
+	}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+		
+		#titlecard {height: 500px;}
+		/*title */
+		#title {width: 280px; margin-left: 40px;}
+
+		#title h1 {font-size: 80px;}
+
+		#title h1 span {font-size: 55px;}
+		
+		#title h2 {font-size: 15px; width: 220px;}
+
+		#title h5 {font-size: 14px; letter-spacing: 0;}
+		
+		/*chapter nav */
+		#chapter-nav li {
+			font-size: 13px; 
+			margin-right: 15px;  
+		}
+
+		/*intro*/
+		#introduction {height: 700px;}
+
+		#intro-inner {height:750px;}
+		
+		#intro-text {width: 270px;padding-left: 30px;}
+		
+		#intro-text h2 {font-size: 22px;margin-bottom: 15px; text-shadow: none;}
+		
+		#intro-text h3 {font-size: 20px; margin-bottom: 15px; text-shadow: none;}
+		
+		#intro-text h4 {font-size: 15px;line-height: 1.1; margin-bottom: 13px; text-shadow: none;}
+		
+		#intro-text h6 a {font-size: 32px;}
+		
+		/*chapter 1*/
+		#chapter1 {height: 600px; padding-top: 40px;}
+		
+		/*chapter title padding*/
+		#c1-intro, #c2-intro, #c3-intro, #c4-intro, #c5-intro {padding-top: 40px;}
+		
+		/*chapter headings */
+		.panel h2 {width: 450px;}
+		
+		#c1-intro h2 {font-size: 40px;}
+		
+		#c2-intro h2 {font-size: 30px; width: 250px;}
+		
+		#c3-intro h2 {font-size: 30px; width: 250px;}
+		
+		#c4-intro h2 {font-size: 30px; width: 250px;}
+		
+		/*card*/
+		.card {width: 300px; padding-left: 10px; padding-top: 20px;}
+		.photo-info {font-size: 11px;}
+		.photo-info a {font-style: normal;}
+		
+		/*remsberg*/
+		#photo1 {background: transparent url(http://placekitten.com/800/600);}
+		#photo1 img {display: none;}
+		#photo1 h2 {font-size: 30px; width: 250px;}
+		
+		/*boxes*/
+		#photo2 {padding-left: 30px;}
+		#photo2 h2 {font-size: 100px;}
+		
+		/*cushman */
+		#photo5b {width: 1500px; padding-top: 0;}
+		#photo5b h2 {font-size: 90px; }
+		
+		/*share */
+		#c5-intro h2 {
+		font-size: 30px;
+		margin-bottom: 10px;
+		}
+
+		#quotes blockquote {
+			width: 300px;
+			float: none;
+			margin: 0 70px 0 0;
+			font-size: 16px;
+			text-shadow: 1px 2px 3px #000;
+			color: #888;
+		}
+		#c5-intro h3 {font-size: 30px;}
+		
+		/*legacy*/
+		#learn h2 {margin-top: 20px;}
+		
+		/*notebooks */
+		#notebooks {display: none;}
+	
+	}
+
+
+
+
+
+
+
+
+
+/* =============================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+ 
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+}
